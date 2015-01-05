@@ -1,0 +1,4 @@
+hosts:
+    yourhostname.ddns.net:
+        username: foo
+        password: bar

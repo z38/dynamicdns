@@ -1,0 +1,15 @@
+parameters:
+    foo: bar
+    unused: desunu
+hosts:
+    first.com:
+        provider: noip
+        username: firstuser
+        password: firstpass
+        foo: %foo%
+    second.com:
+        username: seconduser
+        password: %foo%
+        provider: noip
+extra:
+    extrakey: extraval

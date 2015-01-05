@@ -4,6 +4,7 @@ namespace Z38\DynamicDns;
 
 use Symfony\Component\Yaml\Yaml;
 use Z38\DynamicDns\Provider\ProviderManager;
+use Z38\DynamicDns\Exception\InvalidHostException;
 
 class Configuration
 {
