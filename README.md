@@ -1,7 +1,7 @@
 DynamicDns
 ==========
 
-[![Build Status](https://secure.travis-ci.org/z38/dynamicdns?branch=master)](http://travis-ci.org/z38/dynamicdns)
+[![Build Status](https://travis-ci.org/z38/dynamicdns.svg?branch=master)](https://travis-ci.org/z38/dynamicdns)
 
 **DynamicDns** contains dynamic DNS updater utility (called *ddns-updater*). In addition, it allows users to write their custom Dynamic DNS updater by providing an easy-to-use API.
 
