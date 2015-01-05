@@ -1,0 +1,8 @@
+parameters:
+    noip_username: foo
+    noip_password: bar
+hosts:
+    yourhostname.ddns.net:
+        provider: noip
+        username: %noip_username%
+        password: %noip_password%

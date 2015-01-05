@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__.'/../vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+
+$application = new Application('Dynamic DNS Updater', '0.1.0');
+$application->add(new Z38\DynamicDns\Command\IpCommand);
+$application->add(new Z38\DynamicDns\Command\TestCommand);
+$application->add(new Z38\DynamicDns\Command\UpdateCommand);
+$application->run();
