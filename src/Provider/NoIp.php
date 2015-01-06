@@ -45,7 +45,7 @@ class NoIp implements ProviderInterface
             $url .= '&myip='.$ip;
         }
         $headers = array(
-            'User-Agent' => 'ddns-updater/v0.1.0 z38@users.noreply.github.com'
+            'User-Agent' => 'ddns-updater/v0.1.1 z38@users.noreply.github.com',
         );
 
         $this->browser->setListener(new BasicAuthListener($data['username'], $data['password']));

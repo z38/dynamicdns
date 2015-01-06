@@ -28,7 +28,7 @@ class ProviderManager
     public function get($id)
     {
         if (!isset($this->provider[$id])) {
-            return null;
+            return;
         }
 
         return $this->provider[$id];

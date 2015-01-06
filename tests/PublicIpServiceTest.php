@@ -12,10 +12,10 @@ class PublicIpServiceTest extends \PHPUnit_Framework_TestCase
     public function testGet()
     {
         $ipExpected = trim(file_get_contents('http://checkip.amazonaws.com/'));
-        
+
         $service = new PublicIpService();
         $ip = $service->get();
-        
+
         $this->assertSame($ipExpected, $ip);
     }
 }
