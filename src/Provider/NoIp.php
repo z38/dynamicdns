@@ -2,9 +2,9 @@
 
 namespace Z38\DynamicDns\Provider;
 
-use Buzz\Browser;
 use Buzz\Listener\BasicAuthListener;
 use Buzz\Listener\ListenerChain;
+use Z38\DynamicDns\BrowserFactory;
 use Z38\DynamicDns\Exception\InvalidHostException;
 use Z38\DynamicDns\Exception\UpdateException;
 
@@ -14,7 +14,7 @@ class NoIp implements ProviderInterface
 
     public function __construct()
     {
-        $this->browser = new Browser();
+        $this->browser = BrowserFactory::create();
     }
 
     /**
@@ -40,7 +40,7 @@ class NoIp implements ProviderInterface
      */
     public function update($host, $ip, $data)
     {
-        $url = sprintf('http://dynupdate.no-ip.com/nic/update?hostname=%s', $host);
+        $url = sprintf('https://dynupdate.no-ip.com/nic/update?hostname=%s', $host);
         if ($ip !== null) {
             $url .= '&myip='.$ip;
         }

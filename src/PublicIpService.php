@@ -13,7 +13,7 @@ class PublicIpService
      */
     public function __construct()
     {
-        $this->browser = new Browser();
+        $this->browser = BrowserFactory::create();
     }
 
     /**
@@ -23,7 +23,7 @@ class PublicIpService
      */
     public function get()
     {
-        $response = $this->browser->get('http://api.ipify.org/');
+        $response = $this->browser->get('https://api.ipify.org/');
 
         return trim($response->getContent());
     }
